@@ -1,1 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Hotel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="Hotels.xsd">
+
+  <!-- Error #5: duplicate <Name>, Error #4: missing closing </Address> -->
+  <Hotel Rating="5">
+    <Name>The Westin Tempe</Name>
+    <Name>Duplicate Name</Name>
+    <Phone>480-968-8885</Phone>
+    <Phone>800-937-8461</Phone>
+    <Address>
+      <Number>11</Number>
+      <Street>East 7th Street</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+      <NearestAirport>PHX</NearestAirport>
+    <!-- missing </Address> closing tag -->
+  </Hotel>
+
+  <!-- Error #2: missing Rating attribute -->
+  <Hotel>
+    <Name>Tempe Mission Palms</Name>
+    <Phone>480-894-1400</Phone>
+    <Address>
+      <Number>60</Number>
+      <Street>East 5th Street</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+      <NearestAirport>PHX</NearestAirport>
+    </Address>
+  </Hotel>
+
+  <!-- Error #3: missing required <Phone> element -->
+  <Hotel Rating="4">
+    <Name>Graduate Tempe</Name>
+    <Address>
+      <Number>225</Number>
+      <Street>E Apache Blvd</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+      <NearestAirport>PHX</NearestAirport>
+    </Address>
+  </Hotel>
+
+  <!-- one more valid hotel (still inside wrong root tag) -->
+  <Hotel Rating="4">
+    <Name>Canopy by Hilton Tempe Downtown</Name>
+    <Phone>480-968-6800</Phone>
+    <Address>
+      <Number>108</Number>
+      <Street>E University Dr</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+      <NearestAirport>PHX</NearestAirport>
+    </Address>
+  </Hotel>
+
+</Hotel> <!-- Error #1: wrong root element name -->
 
